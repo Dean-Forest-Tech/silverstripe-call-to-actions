@@ -1,0 +1,15 @@
+---
+Name: ctaconfig
+---
+
+gorriecoe\Link\Models\Link:
+  styles:
+    ctabutton: "Button template for Call To Action"
+
+SilverStripe\Control\Controller:
+  extensions:
+    ilateral\SilverStripe\CallToActions\ControllerExtension
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    ilateral\SilverStripe\CallToActions\SiteConfigExtension

@@ -1,41 +1,38 @@
 {
   "name": "ilateral/silverstripe-call-to-actions",
   "description": "A Silverstripe module allowing you to create call to actions and render them using custom templates",
-	"type": "silverstripe-vendormodule",
-	"homepage": "http://github.com/i-lateral/silverstripe-call-to-actions",
-	"keywords": [
-		"silverstripe",
-		"CTA",
-		"Call To Action",
-	],
-	"license": "BSD-3-Clause",
-	"authors": [
-		{
-			"name": "Morven Lewis-Everley",
-			"email": "morven@i-lateral.com"
-		}
-	],
-	"support": {
-		"issues": "http://github.com/i-lateral/silverstripe-call-to-actions/issues"
-	},
-	"require": {
-		"silverstripe/framework": "^4.0",
-		"silverstripe/siteconfig": "^4.0",
-		"symbiote/silverstripe-gridfieldextensions": "^3.1"
-	},
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.0"
-	},
-    "autoload": {
-        "psr-4": {
-            "ilateral\\SilverStripe\\CallToActions\\": "src/",
-            "ilateral\\SilverStripe\\CallToActions\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "lint": "vendor/bin/phpcs src/ tests/",
-        "lint-clean": "vendor/bin/phpcbf src/ tests/"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "type": "silverstripe-vendormodule",
+  "homepage": "http://github.com/i-lateral/silverstripe-call-to-actions",
+  "keywords": [
+    "silverstripe",
+    "CTA",
+    "Call To Action"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    { "name": "Morven Lewis-Everley", "email": "morven@i-lateral.com" }
+  ],
+  "support": {
+    "issues": "http://github.com/i-lateral/silverstripe-call-to-actions/issues"
+  },
+  "require": {
+    "silverstripe/framework": "^4.0",
+    "silverstripe/siteconfig": "^4.0",
+    "symbiote/silverstripe-gridfieldextensions": "^3.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ilateral\\SilverStripe\\CallToActions\\": "src/",
+      "ilateral\\SilverStripe\\CallToActions\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "vendor/bin/phpcs src/ tests/",
+    "lint-clean": "vendor/bin/phpcbf src/ tests/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

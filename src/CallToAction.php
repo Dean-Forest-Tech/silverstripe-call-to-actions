@@ -2,19 +2,30 @@
 
 namespace ilateral\SilverStripe\CallToActions;
 
-use SilverStripe\ORM\DataObject;
 use gorriecoe\Link\Models\Link;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Forms\FieldList;
 use gorriecoe\LinkField\LinkField;
+use SilverStripe\Core\Convert;
+use SilverStripe\Forms\ReadonlyField;
+use SilverStripe\SiteConfig\SiteConfig;
 
-class CallToAction extends DataObject
+/**
+ * @property string     Name
+ * @property string     Slug
+ * 
+ * @method SiteConfig   Site
+ * @method Link         Button
+ */
+abstract class CallToAction extends DataObject
 {
     private static $db = [
         'Name' => 'Varchar',
-        'Slug' => 'Varchar',
-        'Content' => 'HTMLText'
+        'Slug' => 'Varchar'
     ];
 
     private static $has_one = [
+        'Site' => SiteConfig::class,
         'Button' => Link::class
     ];
 
@@ -28,6 +39,7 @@ class CallToAction extends DataObject
         $self = $this;
    
         $this->beforeUpdateCMSFields(function ($fields) use ($self) {
+            /** @var FieldList $fields */
             $fields->addFieldToTab(
                 'Root.Main',
                 LinkField::create(
@@ -36,8 +48,20 @@ class CallToAction extends DataObject
                     $self
                 )
             );
+
+            $fields->replaceField(
+                'Slug',
+                ReadonlyField::create('Slug')
+            );
         });
 
         return parent::getCMSFields();
+    }
+
+    public function onBeforeWrite()
+    {
+        parent::onBeforeWrite();
+
+        $this->Slug = Convert::raw2url($this->Name);
     }
 }

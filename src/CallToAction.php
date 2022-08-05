@@ -17,7 +17,7 @@ use SilverStripe\SiteConfig\SiteConfig;
  * @method SiteConfig   Site
  * @method Link         Button
  */
-abstract class CallToAction extends DataObject
+class CallToAction extends DataObject
 {
     private static $db = [
         'Name' => 'Varchar',

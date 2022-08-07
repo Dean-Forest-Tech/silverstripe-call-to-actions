@@ -1,3 +1,3 @@
 <div class="cta-cta">
-    {$Link}
+    {$Button}
 </div>

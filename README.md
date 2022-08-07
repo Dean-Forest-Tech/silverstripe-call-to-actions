@@ -30,8 +30,9 @@ By default this module includes two CTA types:
 
 ## Templates
 
-This module exposes `$getRenderedCustomMenu(slug)` into all controllers and can
-be called anywhere from within a controller.
+This module exposes `$GetCTA("slug")` into all 
+controllers and can be called anywhere from within a
+controller.
 
 Each `CallToAction` uses `forTemplate` to handle rendering their data, so you
 could also link `CallToAction`s to your own pages or objects and load them

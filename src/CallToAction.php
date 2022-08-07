@@ -29,9 +29,16 @@ class CallToAction extends DataObject
         'Button' => Link::class
     ];
 
+
+    private static $summary_fields = [
+        'Name',
+        'Slug'
+    ];
+
     public function forTemplate(): string
     {
-        return $this->renderWith($this->getViewerTemplates());
+        return $this
+            ->renderWith($this->getViewerTemplates());
     }
 
     public function getCMSFields()
@@ -40,11 +47,13 @@ class CallToAction extends DataObject
    
         $this->beforeUpdateCMSFields(function ($fields) use ($self) {
             /** @var FieldList $fields */
+            $fields->removeByName('ButtonID');
+
             $fields->addFieldToTab(
                 'Root.Main',
                 LinkField::create(
                     'Button',
-                    'Button',
+                    $self->fieldLabel('Button'),
                     $self
                 )
             );

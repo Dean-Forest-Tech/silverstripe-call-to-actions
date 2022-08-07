@@ -3,13 +3,15 @@
 namespace ilateral\SilverStripe\CallToActions;
 
 use SilverStripe\Core\Extension;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\SiteConfig\SiteConfig;
 
 class ControllerExtension extends Extension
 {
-    public function getRenderedCTA(string $slug): string
+    public function getCTA(string $slug): DBHTMLText
     {
         $config = SiteConfig::current_site_config();
+        $return = DBHTMLText::create('CTA');
         /** @var CallToAction */
         $cta = CallToAction::get()
             ->filter([
@@ -18,9 +20,17 @@ class ControllerExtension extends Extension
             ])->first();
 
         if (empty($cta)) {
-            return "";
+            return $return;
         }
 
-        return $cta->forTemplate();
+        $result = $cta->forTemplate();
+
+        if (is_a($result, DBHTMLText::class)) {
+            $return = $result;
+        } else {
+            $return->setValue($result);
+        }
+
+        return $return;
     }
 }

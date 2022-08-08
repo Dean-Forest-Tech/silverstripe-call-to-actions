@@ -19,6 +19,8 @@ use SilverStripe\SiteConfig\SiteConfig;
  */
 class CallToAction extends DataObject
 {
+    private static $table_name = "CTA_CallToAction";
+
     private static $db = [
         'Name' => 'Varchar',
         'Slug' => 'Varchar'

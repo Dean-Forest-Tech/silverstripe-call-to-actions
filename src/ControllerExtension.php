@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\CallToActions;
+namespace DFT\SilverStripe\CallToActions;
 
 use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBHTMLText;

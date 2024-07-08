@@ -8,8 +8,8 @@ gorriecoe\Link\Models\Link:
 
 SilverStripe\Control\Controller:
   extensions:
-    - ilateral\SilverStripe\CallToActions\ControllerExtension
+    - DFT\SilverStripe\CallToActions\ControllerExtension
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - ilateral\SilverStripe\CallToActions\SiteConfigExtension
+    - DFT\SilverStripe\CallToActions\SiteConfigExtension

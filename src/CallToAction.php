@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\CallToActions;
+namespace DFT\SilverStripe\CallToActions;
 
 use gorriecoe\Link\Models\Link;
 use SilverStripe\ORM\DataObject;

@@ -1,0 +1,7 @@
+---
+Name: ctaconfiglegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    ilateral\SilverStripe\CallToActions\CallToAction: DFT\SilverStripe\CallToActions\CallToAction
+    ilateral\SilverStripe\CallToActions\CallToActionRow: DFT\SilverStripe\CallToActions\CallToActionRow

@@ -4,13 +4,11 @@ A SilverStripe module that allows creation of custom call to actions
 via `SiteConfig` and allows them to be rendered in templates using
 unique "slugs"
 
-This module is developed and maintained by [ilateral](http://www.ilateralweb.co.uk)
-
 ## Installation Instructions
 
 The prefered way to install this module is via composer:
 
-    composer require ilateral/silverstripe-calltoactions
+    composer require dft/silverstripe-calltoactions
 
 ## Usage
 

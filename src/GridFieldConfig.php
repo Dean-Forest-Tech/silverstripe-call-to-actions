@@ -1,10 +1,9 @@
 <?php
 
-namespace ilateral\SilverStripe\CallToActions;
+namespace DFT\SilverStripe\CallToActions;
 
 use SilverStripe\Forms\GridField\GridFieldConfig as SS_GridFieldConfig;
 use SilverStripe\Core\ClassInfo;
-use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\GridField\GridFieldButtonRow;
 use SilverStripe\Forms\GridField\GridFieldToolbarHeader;
 use SilverStripe\Forms\GridField\GridFieldSortableHeader;

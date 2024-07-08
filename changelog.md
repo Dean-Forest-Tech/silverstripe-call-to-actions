@@ -7,3 +7,7 @@
 ## 1.0.1
 
 * Add missing table names
+
+## 1.0.2
+
+* Migrate Namespaces
